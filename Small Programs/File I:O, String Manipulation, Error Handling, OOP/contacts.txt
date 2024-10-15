@@ -1,0 +1,4 @@
+Larry Gates, 1111111111, gatesls@iu.edu, 1.1.1990
+Josh Baker, 2222222222, josh@iu.edu, 2.20.1995
+Dr. M Dalkilic, 3333333333, dalkilic@indiana.edu, 4.29.1930
+Dr. D Williamson, 4444444444, Williamson#indiana.edu, 12.21.1980

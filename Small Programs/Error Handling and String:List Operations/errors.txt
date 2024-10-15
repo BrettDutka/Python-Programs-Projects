@@ -1,0 +1,207 @@
+import math
+def sum_of_list():
+    ""Expected Output:
+      
+    20
+    """
+    
+    list_to_sum = [0, 1, 1, 2, 3, 5, 8]
+        
+    total_sum = 0
+    # Remember, we don't use the sum function in this class
+    for item in list_to_sum:
+        total_sum += item
+    return total_sum
+
+
+def first_item_in_list():
+    """Expected Output:
+       
+    Alaskan Malamute
+    """
+    
+    dog_list = ['Alaskan Malamute', 'Siberian Husky', 'Golden Retriever']
+    
+    return dog_list[0]
+
+
+def last_item_in_list():
+    """Expected Output:
+       
+    Golden Retriever
+    """
+    
+    dog_list = ['Alaskan Malamute', 'Siberian Husky', 'Golden Retriever']
+    
+    return dog_list[-1] # this works, but is there a better way?
+
+
+def add_to_list():
+    """Expected Output:
+       
+    ['Alaskan Malamute', 'Siberian Husky', 'Golden Retriever', 'Beagle', 'Boykin Spaniel']
+    """
+    
+    dog_list = ['Alaskan Malamute', 'Siberian Husky', 'Golden Retriever']
+    
+    dog_list += ['Beagle']
+    dog_list.append('Boykin Spaniel')
+    
+    return dog_list
+    
+    
+def get_from_list():
+    """Expected Output:
+       
+    'Golden Retriever'
+    """
+    
+    dog_list = ['Alaskan Malamute', 'Siberian Husky', 'Golden Retriever']
+    
+    return dog_list[2]
+
+def if_statements(num):
+    """Expected Output:
+       
+    True
+    """
+    num = 5 
+
+    if(num < 5):
+        return "num is less than 5"
+    else:
+        return "num is greater than 5"
+
+print(if_statements())
+
+def pythagorean_theorem(a, b):
+    """Expected Output:
+       
+    5
+    """
+    # This one requires a change up at the top of the file
+    # Hint: https://docs.python.org/3/library/math.html
+    return math.sqrt(a**2 + b**2)
+
+
+def triangle_wave(a, x):
+    """
+    HINT: you might need to change the line above
+
+    Source:https://en.wikipedia.org/wiki/Triangle_wave (trigonometric functions)
+
+    Variables: 
+    a - amplitude 
+    p - period
+    x - x - position
+
+
+    Examples: triangle_wave(1, 2, 5) --> 0.4 (there is potential a rounding error, might be 0.40000000000000013. Just worry about the first 3)
+    """
+    p1 = math.sin(2*math.pi/(p * x))
+    p2 = math.asin(p1)
+    f = 2 * (a) / math.pi
+    return f * p2
+
+
+def add_two_to_ten():
+    a = 10
+    
+    return a + 2
+
+
+def power_plant(output):
+    """
+    If you are below 25 (not inclusive), you are "way too low!"
+    If you are below 50, you are "too low!"
+    If you are at 50, you are "just right"
+    if you are above 50, you are "too high!"
+    You should never get "something very bad has happened"
+
+    This one cannot be 'solved' in a single, correct way. 
+    Rather, it exists to demonstrate a common semantic error regarding multiple conditions on a list.
+    """
+    
+    if output < 50:
+        return "too low!"
+    elif output < 25:
+        return "way too low!"
+    elif output > 50:
+        return "too high!"
+    elif output == 50:
+        return "just right"
+    else:
+        return("something very bad has happened")
+
+def who_let_the_dogs_out():
+    """Expected Output:
+       
+    Alaskan Malamute
+    Siberian Husky
+    Golden Retriever
+
+    DOES NOT RETURN
+    """
+
+    dog_list = ['Alaskan Malamute', 'Siberian Husky', 'Golden Retriever']
+    
+    for i in dog_list:
+        print(i)
+
+
+if __name__ == '__main__':
+    print("Testing function sum_of_list")
+    assert sum_of_list() == 20
+    print("\t (Returned, Expected)", sum_of_list(), 20)
+    print()
+
+    print("Testing function first_item_in_list")
+    assert first_item_in_list() == 'Alaskan Malamute'
+    print("\t (Returned, Expected)", first_item_in_list(), "Alaskan Malamute")
+    print()
+
+    print("Testing function last_item_in_list")
+    assert last_item_in_list() == 'Golden Retriever'
+    print("\t (Returned, Expected)", last_item_in_list(), "Golden Retriever")
+    print()
+
+    print("Testing function add_to_list")
+    assert add_to_list() == ['Alaskan Malamute', 'Siberian Husky', 'Golden Retriever', 'Beagle', 'Boykin Spaniel']
+    print("\t (Returned, Expected)", add_to_list(), ['Alaskan Malamute', 'Siberian Husky', 'Golden Retriever', 'Beagle', 'Boykin Spaniel'])
+    print()
+
+    print("Testing function get_from_list")
+    assert get_from_list() == 'Golden Retriever'
+    print("\t (Returned, Expected)", get_from_list(), 'Golden Retriever')
+    print()
+
+    print("Testing function if_statements")
+    assert if_statements(20) == "num is greater than 5"
+    print("\t (Returned, Expected)", if_statements(20), "num is greater than 5")
+    print("\t (Returned, Expected)", if_statements(4), "num is less than 5")
+    print()
+
+    print("Testing function pythagorean_theorem")
+    assert pythagorean_theorem(3, 4) == 5
+    print("\t (Returned, Expected)", pythagorean_theorem(3, 4), 5)
+    print()
+    
+    print("Testing function triangle_wave")
+    print("\t (Returned, Expected)", triangle_wave(1, 2, 5), "about 0.4")
+    print()
+
+    print("Testing function add_two_to_ten")
+    assert add_two_to_ten() == 12
+    print("\t (Returned, Expected)", add_two_to_ten(), 12)
+
+    print()
+    print("Testing function power_plant")
+    print("\t (Returned, Expected)", power_plant(5), "way too low!")
+    print("\t (Returned, Expected)", power_plant(50), "just right")
+    print("\t (Returned, Expected)", power_plant(75), "too high!")
+    print("\t (Returned, Expected)", power_plant(25), "too low!")
+
+    print()
+    print("Testing function who_let_the_dogs_out")
+    who_let_the_dogs_out()
+    print()

@@ -1,0 +1,108 @@
+
+"""
+Description: Add all the numbers in the given list.
+Make sure to check for empty lists!
+Return: The sum of the numbers in the list.
+"""
+def find_error1():
+    someList = [[1,2,3], [], [9,10], [], [90, 24], [123]]
+    my_sum = 0
+    for elem in someList:
+        if len(elem) > 0:
+            for c in elem:
+                my_sum += c
+        elif len(elem) == 0:
+            pass
+        elif type(elem) == str:
+            pass
+
+
+# Run the funciton to see how it behaves
+print(find_error1())
+
+
+"""
+Description: Function check the flags to allow travel only on GREEN flag.
+Return: A message telling if the a user can travel or not.
+"""
+def find_error2():
+    
+    green_flag = False
+    yellow_flag = True
+
+    if green_flag:
+        status = "You can ride through"
+    
+    elif yellow_flag:
+        status = "You can start your vehicle, and get going only when the FLAG turns green"
+    
+    else:
+        status = "Please wait till the flag turn green."
+
+    return status
+
+
+# Run the funciton to see how it behaves
+print(find_error2)
+
+
+"""
+Description: Builds a simple greeting message.
+Return a greeting message on the given the user names.
+"""
+def find_error3(name1, name2, name3):
+    
+    greetings = "Hey: "+ name1 +" "+ name2 +" "+ name3
+    return(greetings)
+
+
+
+# Run the funciton to see how it behaves
+print(find_error3()) # "Clarence Ellis", "Dorothy Vaughan", "Lyndsey Scott"
+
+
+
+"""
+Description: Given a list in the function, add 1 to its every elenent and return a new list.
+Return: A new list made from the given list.
+"""
+def find_error4():
+    givenList = [456, 45, 6, 7, 8, 765, 89, 12, 43 , 1589 , 547 , 879]
+    newList = []
+
+    for i in givenList:
+        newList += [i+1]
+    
+    return(newList)
+
+
+# Run the funciton to see how it behaves
+print(find_error4())
+
+
+
+"""
+Description: Add elements from two different lists and return the sum.
+the given lists are of the same size example [1,2,3] and [6,7,8]
+Return: Sum of numbers
+Tip: In Python, things can be converted to Integers by putting them inside the int().
+Example: I_am_a_integer = int(I_am_not_an_integer)
+"""
+def find_error5(list1, list2):
+    
+    my_sum  = 0
+    for i in range(len(list1)):
+        my_sum += int(list1[i]) + int(list2[i])
+    return my_sum
+
+
+
+# Run the funciton to see how it behaves
+print(find_error5([34, 56, 78, 100], [100, 200, 500, "23"]))
+
+
+
+
+
+
+
